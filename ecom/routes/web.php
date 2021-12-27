@@ -15,11 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('home', function() {
-    return view('front.home');
+    return view('front.shop');
 });
 
 Route::get('shop', [HomeController::class, 'shop']);
+
+Route::get('products', function() {
+    return view('front.shop');
+});
+
+Route::get('about', function() {
+    return view('front.shop');
+});
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'home'])->name('home');
