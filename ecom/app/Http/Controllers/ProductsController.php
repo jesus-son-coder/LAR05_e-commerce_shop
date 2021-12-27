@@ -15,7 +15,7 @@ class ProductsController extends Controller
         return view('admin.product.index', compact('products'));
     }
 
-    public function create()
+    public function create():View
     {
         return view('admin.product.create');
     }

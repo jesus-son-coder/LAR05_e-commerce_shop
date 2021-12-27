@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,10 +41,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']],
             return view('admin.index');
         })->name('admin.index');
 
-        Route::POST('admin/store', [AdminController::class, 'store']);
+        //Route::POST('admin/store', [AdminController::class, 'store']);
 
-        Route::get('/admin', [AdminController::class, 'index']);
+        //Route::get('/admin', [AdminController::class, 'index']);
 
-        Route::resource('product', 'ProductsController');
+        Route::resource('product', ProductsController::class);
     }
 );
