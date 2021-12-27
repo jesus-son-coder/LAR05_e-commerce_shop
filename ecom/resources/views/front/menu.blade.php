@@ -45,7 +45,7 @@
                         <a class="nav-link" href="{{ url('/shop') }}">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>

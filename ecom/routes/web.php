@@ -28,6 +28,8 @@ Route::get('about', function() {
     return view('front.shop');
 });
 
+Route::get('contact', [HomeController::class, 'contact'])->name('contactus');
+
 Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
