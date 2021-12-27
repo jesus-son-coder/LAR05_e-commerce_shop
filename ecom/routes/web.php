@@ -41,6 +41,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']],
             return view('admin.index');
         })->name('admin.index');
 
-        // Route::resource('product', ProductsController::class);
+        Route::POST('admin/store', [AdminController::class, 'store']);
+
+        Route::get('/admin', [AdminController::class, 'index']);
+
+        Route::resource('product', 'ProductsController');
     }
 );
