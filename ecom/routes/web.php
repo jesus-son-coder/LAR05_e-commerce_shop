@@ -34,3 +34,13 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'home'])->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']],
+    function() {
+        Route::get('/', function() {
+            return view('admin.index');
+        })->name('admin.index');
+
+        // Route::resource('product', ProductsController::class);
+    }
+);
