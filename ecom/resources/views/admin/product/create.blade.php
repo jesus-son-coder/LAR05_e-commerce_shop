@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid container-create-product">
+        <div class="row row-create-product">
             <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
@@ -73,8 +73,8 @@
                         </div>
 
                         <div class="form-group">
-                            {{ Form::label('Image', 'Image') }}
-                            {{ Form::text('image', null, array('class' => 'form-control')) }}
+                            {{ Form::label('image', 'Image') }}
+                            {{ Form::file('image',array('class' => 'form-control')) }}
                         </div>
 
                         <div class="form-group">
@@ -82,7 +82,7 @@
                             {{ Form::text('spl_price', null, array('class' => 'form-control')) }}
                         </div>
 
-                        {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+                        {{ Form::submit('Submit', array('class' => 'btn btn-primary mt-3')) }}
 
                         {!! Form::close() !!}
                     </div>

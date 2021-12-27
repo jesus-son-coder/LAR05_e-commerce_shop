@@ -11286,3 +11286,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.container-create-product {
+  margin-top: 50px !important;
+}
+
+nav.sidebar {
+  position: unset;
+}
+
+.row.row-create-product {
+  margin-top: 100px;
+}
