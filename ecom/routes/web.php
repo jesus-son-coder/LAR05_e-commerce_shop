@@ -30,5 +30,5 @@ Route::get('about', function() {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-// Route::get('/home', [HomeController::class, 'home'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
