@@ -11297,3 +11297,11 @@ nav.sidebar {
 .row.row-create-product {
   margin-top: 100px;
 }
+
+.product-list-container {
+  margin-top: 120px;
+}
+
+.product-list-container li {
+  list-style: none;
+}
